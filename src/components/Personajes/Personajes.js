@@ -34,14 +34,17 @@ export default class Personajes extends Component {
           {this.state.status == true &&
             this.state.personajes.map((personaje) => {
               return (
-                <div class='card mt-3 col-4' key={personaje.idPersonaje}>
+                <div
+                  className='card col-md-3 mt-3 mr-2 px-md-5'
+                  key={personaje.idPersonaje}
+                >
                   <img
                     src={personaje.imagen}
-                    class='card-img-top'
+                    className='card-img-top pt-3'
                     alt={personaje.nombre}
                   />
-                  <div class='card-body'>
-                    <h5 class='card-title'>{personaje.nombre}</h5>
+                  <div className='card-body'>
+                    <h5 className='card-title'>{personaje.nombre}</h5>
                   </div>
                 </div>
               );

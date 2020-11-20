@@ -32,15 +32,15 @@ export default class Series extends Component {
     return (
       <div className='container mt-3'>
         {this.state.status == true && (
-          <div class='card w-50 mx-auto'>
+          <div className='card w-50 mx-auto'>
             <img
               src={this.state.serie.imagen}
-              class='card-img-top'
+              className='card-img-top'
               alt={this.state.serie.nombre}
             />
-            <div class='card-body'>
-              <h5 class='card-title'>{this.state.serie.nombre}</h5>
-              <p class='card-text'>
+            <div className='card-body'>
+              <h5 className='card-title'>{this.state.serie.nombre}</h5>
+              <p className='card-text'>
                 Año: {this.state.serie.anyo}- puntuación:{" "}
                 {this.state.serie.puntuacion}
               </p>

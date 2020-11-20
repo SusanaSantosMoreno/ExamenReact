@@ -44,9 +44,6 @@ export default class editPersonaje extends Component {
 
   updatePersonaje = (e) => {
     e.preventDefault();
-    console.log(
-      `${Global.urlSeries}/api/Personajes/${this.selectPersonaje.current.value}/${this.selectSerie.current.value}`
-    );
     axios
       .put(
         `${Global.urlSeries}/api/Personajes/${this.selectPersonaje.current.value}/${this.selectSerie.current.value}`
@@ -88,7 +85,7 @@ export default class editPersonaje extends Component {
     } else {
       return (
         <div className='container mt-3'>
-          <form onSubmit={this.updatePersonaje}>
+          <form onSubmit={this.updatePersonaje} className='card p-3'>
             <div className='form-group'>
               <label htmlFor='selectSerie'>Selecciona una serie:</label>
               <select
@@ -130,26 +127,29 @@ export default class editPersonaje extends Component {
 
           <div className='row mt-4'>
             {this.state.statusSerie == true && (
-              <div class='card col-6' key={this.state.serie.idSerie}>
+              <div className='card col-6' key={this.state.serie.idSerie}>
                 <img
                   src={this.state.serie.imagen}
-                  class='card-img-top'
+                  className='card-img-top'
                   alt={this.state.serie.nombre}
                 />
-                <div class='card-body'>
-                  <h5 class='card-title'>{this.state.serie.nombre}</h5>
+                <div className='card-body'>
+                  <h5 className='card-title'>{this.state.serie.nombre}</h5>
                 </div>
               </div>
             )}
             {this.state.statusPersonaje == true && (
-              <div class='card col-6' key={this.state.personaje.idPersonaje}>
+              <div
+                className='card col-6'
+                key={this.state.personaje.idPersonaje}
+              >
                 <img
                   src={this.state.personaje.imagen}
-                  class='card-img-top'
+                  className='card-img-top'
                   alt={this.state.personaje.nombre}
                 />
-                <div class='card-body'>
-                  <h5 class='card-title'>{this.state.personaje.nombre}</h5>
+                <div className='card-body'>
+                  <h5 className='card-title'>{this.state.personaje.nombre}</h5>
                 </div>
               </div>
             )}

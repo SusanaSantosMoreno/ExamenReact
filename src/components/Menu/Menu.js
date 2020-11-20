@@ -59,7 +59,7 @@ export default class Navigation extends Component {
               </li>
               <li className='nav-item dropdown'>
                 <a
-                  class='nav-link dropdown-toggle'
+                  className='nav-link dropdown-toggle'
                   href='#'
                   id='navbarDropdown'
                   role='button'
@@ -69,13 +69,14 @@ export default class Navigation extends Component {
                 >
                   Series
                 </a>
-                <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
+                <div className='dropdown-menu' aria-labelledby='navbarDropdown'>
                   {this.state.status == true &&
                     this.state.series.map((serie) => {
                       return (
                         <NavLink
                           className='dropdown-item'
                           to={`/serie/${serie.idSerie}`}
+                          key={serie.idSerie}
                         >
                           {serie.nombre}
                         </NavLink>
