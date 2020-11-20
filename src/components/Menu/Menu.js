@@ -53,7 +53,7 @@ export default class Navigation extends Component {
                 </NavLink>
               </li>
               <li className='nav-item'>
-                <NavLink className='nav-link' to='/create'>
+                <NavLink className='nav-link' to='/modificarPersonaje'>
                   Modificar Personajes
                 </NavLink>
               </li>

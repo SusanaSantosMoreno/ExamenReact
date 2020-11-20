@@ -49,7 +49,7 @@ export default class addPersonaje extends Component {
     } else {
       return (
         <div className='container mt-3'>
-          <form onSubmit={this.crearPersonaje}>
+          <form onSubmit={this.crearPersonaje} className='card p-3'>
             <div className='form-group'>
               <label htmlFor='inputNombre'>Nombre:</label>
               <input

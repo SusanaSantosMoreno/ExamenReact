@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import Series from "./components/Series/Series";
 import Personajes from "./components/Personajes/Personajes";
 import AddPersonaje from "./components/Personajes/AddPersonaje";
+import editPersonaje from "./components/Personajes/editPersonaje";
 
 export default class Router extends Component {
   render() {
@@ -30,6 +31,11 @@ export default class Router extends Component {
             }}
           ></Route>
           <Route exact path='/nuevoPersonaje' component={AddPersonaje}></Route>
+          <Route
+            exact
+            path='/modificarPersonaje'
+            component={editPersonaje}
+          ></Route>
         </Switch>
       </BrowserRouter>
     );
